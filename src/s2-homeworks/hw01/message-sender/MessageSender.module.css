@@ -1,18 +1,53 @@
 .sendForm {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px;
+    background: #f9f9f9;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
+    /*max-width: 530px; !* фиксируем максимальную ширину *!*/
+    width: 100%;      /* адаптивно на меньших экранах */
+    box-sizing: border-box;
 }
 
 .textarea {
+    flex: 1;                /* занимает всё доступное место */
+    padding: 10px 14px;
+    border: 1px solid #ccc;
+    border-radius: 16px;
+    font-size: 15px;
+    outline: none;
+    resize: none;           /* нельзя растягивать вручную */
 
+    /* перенос строк */
+    white-space: pre-wrap;  /* сохраняем переносы Enter */
+    word-wrap: break-word;  /* длинные слова ломаем на перенос */
+    overflow-wrap: break-word;
+
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+.textarea:focus {
+    border-color: #4a90e2;      /* рамка при фокусе */
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.4); /* лёгкая тень */
 }
 
 .button {
-
+    padding: 10px 16px;
+    border: none;
+    border-radius: 16px;
+    background-color: #4a90e2; /* основной цвет кнопки */
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
 }
 
 .button:hover {
-
+    background-color: #357ab8; /* чуть темнее */
 }
 .button:active {
-
+    transform: scale(0.95); /* лёгкое уменьшение */
 }

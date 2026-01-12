@@ -1,31 +1,68 @@
+/* ======================= */
+/* Свои сообщения — правая сторона */
 .message {
-
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
 }
 
 .imageAndText {
-
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    flex-direction: row-reverse; /* аватар справа */
+    position: relative;
 }
 
+/* аватар */
 .imageAndText img {
-
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
-.text {
-
-}
-
-.text:after {
-
-}
-
-.name {
-
-}
-
+/* пузырь текста */
 .messageText {
-
+    background: #dcf8c6; /* зеленый фон */
+    padding: 8px 12px;
+    border-radius: 14px;
+    max-width: 75%;
+    word-break: break-word;
+    white-space: pre-wrap;
+    position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
-.time {
+/* имя вверху */
+.name {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: #333;
+}
 
+/* текст */
+.text {
+    font-size: 15px;
+    color: #222;
+}
+
+/* стрелка справа */
+.text:after {
+    content: "";
+    position: absolute;
+    right: -6px;
+    top: 16px;
+    border: 6px solid transparent;
+    border-left-color: #dcf8c6;
+}
+
+/* время под аватаркой */
+.time {
+    font-size: 12px;
+    color: #888;
+    margin-top: 4px;
+    align-self: center; /* по центру под аватаркой */
 }
