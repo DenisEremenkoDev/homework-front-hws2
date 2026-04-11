@@ -2,10 +2,25 @@
 }
 
 .span {
+    font-weight: 500;
+    font-size: 16px;
+    color: #0080ff;
+}
+
+.span:hover {
+    text-decoration: underline;
 }
 
 .input {
+    font-weight: 500;
+    font-size: 16px;
+    color: #000;
+    border-radius: 5px;
+    width: 276px;
+    height: 36px;
 }
 
+
 .pen {
+    margin-right: 20px;
 }

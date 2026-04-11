@@ -1,2 +1,7 @@
 .container {
+    width: 1280px;
+    height: 373px;
+    display: flex;
+    gap: 110px;
+    margin-top: 70px ;
 }

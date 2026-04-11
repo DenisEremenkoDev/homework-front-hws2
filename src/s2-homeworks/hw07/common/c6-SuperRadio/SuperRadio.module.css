@@ -1,4 +1,9 @@
 .radio {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    accent-color: #0c0000; /* зелёный цвет выбранной кнопки */
+    cursor: pointer;
 }
 
 .radio::before {
@@ -9,7 +14,15 @@
 }
 
 .label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
 }
 
 .options {
+    display: flex;
+    flex-direction: column;
+    gap: 20px
+
 }
+

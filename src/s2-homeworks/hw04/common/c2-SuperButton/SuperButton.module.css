@@ -1,16 +1,36 @@
 .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px;
+
+    border-radius: 3px;
+    padding: 5px 24px; /* вертикаль/горизонталь */
+    width: 132px;
+    height: 30px;
+    border: 1px solid #06c;
 }
 
 .disabled {
+    background: #004d99;
+    opacity: 0.5;
 }
 
+
 .secondary {
+    background: #fff;
+    color: #06c;
+
 }
 
 .default {
+    background: #06c;
+    color: #fff;
 }
 
 .red {
+    background: #cc1439;
 }
 
 .default:hover {
@@ -20,13 +40,16 @@
 }
 
 .secondary:hover {
+    background: #e5f0fa;
 }
 
 
 .default:active {
+
 }
 
 .secondary:active {
+    background: #c9e5ff;
 }
 
 .red:active {
