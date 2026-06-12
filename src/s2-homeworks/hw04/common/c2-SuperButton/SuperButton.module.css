@@ -56,4 +56,8 @@
 }
 
 .button:disabled {
+    background: rgba(0, 102, 204, 0.4);
+    color: #fff;
+    border-color: rgba(0, 102, 204, 0.4);
+    cursor: not-allowed;
 }

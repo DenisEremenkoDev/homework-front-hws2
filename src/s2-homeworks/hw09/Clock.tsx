@@ -8,6 +8,7 @@ function Clock() {
     // for autotests // не менять // можно подсунуть в локалСторэдж нужную дату, чтоб увидеть как она отображается
     const [date, setDate] = useState<Date>(new Date(restoreState('hw9-date', Date.now())))
     const [show, setShow] = useState<boolean>(false)
+    const [isRunning, setIsRunning] = useState(false)
     const timerRef = useRef<ReturnType<typeof setInterval> | null>(null)
 
     let hours = date.getHours().toString().padStart(2, '0');
@@ -25,6 +26,7 @@ function Clock() {
             timerRef.current = setInterval(() => {
                 setDate(new Date())
             }, 1000)
+            setIsRunning(true)
         }
     }
 
@@ -32,9 +34,9 @@ function Clock() {
         if (timerRef.current) {
             clearInterval(timerRef.current)
             timerRef.current = null
+            setIsRunning(false)
         }
     }
-
     const onMouseEnter = () => { // пишут студенты // показать дату если наведена мышка
         setShow(true)
     }
@@ -82,18 +84,18 @@ function Clock() {
             <div className={s.buttonsContainer}>
                 <SuperButton
                     id={'hw9-button-start'}
-                    disabled={!!timerRef.current} // пишут студенты // задизэйблить если таймер запущен
+                    disabled={isRunning} // пишут студенты // задизэйблить если таймер запущен
                     // disabled={timerId ? true : false}
                     onClick={start}
                 >
-                    start
+                    Start
                 </SuperButton>
                 <SuperButton
                     id={'hw9-button-stop'}
-                    disabled={!timerRef.current} // пишут студенты // задизэйблить если таймер не запущен
+                    disabled={!isRunning} // пишут студенты // задизэйблить если таймер не запущен
                     onClick={stop}
                 >
-                    stop
+                    Stop
                 </SuperButton>
             </div>
         </div>
