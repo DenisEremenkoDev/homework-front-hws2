@@ -13,11 +13,13 @@
     --background: #212A34;
 }
 
+
 html {
     background-color: var(--background);
     color: var(--color);
 }
 
-.select {
-
+.select option {
+    background-color: var(--background);
+    color: var(--color);
 }
