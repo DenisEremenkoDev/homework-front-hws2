@@ -1,9 +1,10 @@
 .buttonsContainer {
     display: flex;
-    gap:  24px;
-    padding-top:  70px;
+    gap: 24px;
+    padding-top: 70px;
     padding-bottom: 60px;
 }
+
 .responseContainer {
     display: flex;
 }
@@ -15,16 +16,24 @@
 .image {
 }
 
-.textContainer{
-display: flex;
-    align-items: center;
+.textContainer {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 90px;
+
 }
 
 .code {
+    font-weight: 500;
+    font-size: 30px;
+    margin-bottom: 10px;
 }
 
 .text {
-
+font-size: 16px;
 }
+
 .info {
 }

@@ -21,7 +21,6 @@ const HW13 = () => {
     const [image, setImage] = useState('')
 
     type Data = {
-        code: string,
         errorText: string,
         info: string,
     }
@@ -40,31 +39,33 @@ const HW13 = () => {
 
         try {
             const res = await axios.post<Data>(url, {success: x})
+            console.log('SUCCESS:', res)
 
             if (res.status === 200) {
-                setCode(res.data.code)
+                setCode(String(res.status))
                 setImage(success200)
                 setText(res.data.errorText)
                 setInfo(res.data.info)
             }
         } catch (e) {
+            console.log('ERROR:', e)
             if (axios.isAxiosError(e)) {
                 if (e.response) {
                     const data = e.response.data as Data
 
                     if (e.response.status === 400) {
                         setImage(error400)
-                        setCode(data.code)
+                        setCode(String(e.response.status))
                         setText(data.errorText)
                         setInfo(data.info)
                     } else if (e.response.status === 500) {
                         setImage(error500)
-                        setCode(data.code)
+                        setCode(String(e.response.status))
                         setText(data.errorText)
                         setInfo(data.info)
                     } else {
                         setImage(errorUnknown)
-                        setCode('Error!')
+                        setCode(String(e.response.status))
                         setText(e.message)
                         setInfo(e.name)
                     }
