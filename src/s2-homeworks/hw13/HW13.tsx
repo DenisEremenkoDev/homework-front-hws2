@@ -42,7 +42,7 @@ const HW13 = () => {
             console.log('SUCCESS:', res)
 
             if (res.status === 200) {
-                setCode(String(res.status))
+                setCode(String(`Код ${res.status}!`))
                 setImage(success200)
                 setText(res.data.errorText)
                 setInfo(res.data.info)
@@ -55,17 +55,18 @@ const HW13 = () => {
 
                     if (e.response.status === 400) {
                         setImage(error400)
-                        setCode(String(e.response.status))
+                        setCode(String(`Ошибка ${e.response.status}!`))
                         setText(data.errorText)
                         setInfo(data.info)
                     } else if (e.response.status === 500) {
                         setImage(error500)
-                        setCode(String(e.response.status))
+                        setCode(String(`Ошибка ${e.response.status}!`))
                         setText(data.errorText)
                         setInfo(data.info)
                     } else {
                         setImage(errorUnknown)
-                        setCode(String(e.response.status))
+                        // setCode(String(e.response.status))
+                        setCode('Error!')
                         setText(e.message)
                         setInfo(e.name)
                     }
