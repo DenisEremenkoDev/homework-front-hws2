@@ -1,7 +1,8 @@
 .tech {
-
 }
 
 .loading {
-
+   max-width: 372px;
+    display: flex;
+    justify-content: flex-end;
 }
