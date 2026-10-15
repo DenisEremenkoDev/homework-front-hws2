@@ -1,11 +1,22 @@
 .pagination {
     display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 40px;
+}
+
+.text1,
+.text2 {
+    font-size: 14px;
+    line-height: 150%;
+    color: #000;
+    white-space: nowrap;
 }
 
 .text1 {
-
+    margin-left: 8px;
 }
 
 .text2 {
-
+    margin-left: 0;
 }

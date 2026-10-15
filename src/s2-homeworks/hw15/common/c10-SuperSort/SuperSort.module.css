@@ -1,0 +1,32 @@
+
+.icon {
+    width: 10px;
+    height: 10px;
+    margin-left: 6px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+
+.neutral {
+    display: inline-flex;
+    flex-direction: column;
+    vertical-align: middle;
+    margin-left: 6px;
+    cursor: pointer;
+}
+
+.neutral img {
+    width: 10px;
+    height: 6px;
+    display: block;
+    opacity: 0.35;
+}
+
+.neutral img:first-child {
+    transform: rotate(180deg);
+}
+
+.neutral img:last-child {
+    margin-top: -2px;
+}
